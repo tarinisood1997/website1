@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+      
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+    .nav-wrapper{
+      background-color:black;
+      position:relative;
+    
+    }
+    @keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+body { margin: 0; } 
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; height:600px; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 15s slidy infinite;
+  
+}
+.row{
+  width:100%;
+  height:200px;
+}
+.col{
+  position:relative;
+  width:20%;
+}
+#nav-mobile a{
+  font-size:20px;
+}
+.homeProductSection {
+    width: 100%;
+    padding: 60px 0px;
+}
+.section-mid {
+    width: 100%;
+    height: auto;
+    max-width: 1230px;
+    margin: 0 auto;
+}
+.HomeProductTextBox {
+    width: 50%;
+    float: left;
+    padding: 50px 29px;
+    box-sizing: border-box;
+    min-height: 322px;
+}
+.HomeProductTextBox h3 {
+    font-size: 30px;
+    color: #333333;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 30px;
+    line-height: 40px;
+    font-family: Roboto Slab;
+}
+.HomeProductTextBox p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 26px;
+}
+.detail-btn {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: Roboto Slab;
+    font-size: 17px;
+    color: #3c4bb0;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    padding-right: 23px;
+    border-bottom: 1px solid #fff;
+}
+.homeProductImgBox {
+    width: 50%;
+    float: right;
+    overflow: hidden;
+    height: 322px;
+    position: relative;
+    text-align: center;
+}
+.homeProductImgBox h5 {
+    position: absolute;
+    z-index: 8;
+    padding-top: 18%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: Roboto Slab;
+    font-weight: 700;
+    font-size: 20px;
+    height: 100%;
+    box-sizing: border-box;
+    top: -33px;
+    left: 0px;
+}
+.homeProductImgBox img {
+    max-width: 100%;
+    transition: all 0.3s linear 0s;
+    height: 322px;
+}
+.HomeProductTextBoxRight {
+    float: right !important;
+}
+.homeProductImgBoxLeft {
+    float: left !important;
+}
+.homeRequestQuote{
+    width:100%;
+    min-height:100px;
+    background:white;
+    padding:50px 0px; 
+    height:160px;  
+}
+div{
+    display:block;
+}
+.section mid{
+    width:96%;
+    max-width:1130px;
+    height:auto;
+    margin: 0 auto;
+    padding-bottom:10px;
+}
+.requestQuoteRight{
+    float:right;
+    width:22%;
+    text-align:center;
+    padding-top:0px;
+    padding-right:20px;
+}
+.requestQuoteRight a{
+display:block;
+font-family:Roboto Slab;
+font-weight:400;
+color:white;
+font-size:21px;
+border-radius:25px;
+background:red;
+border:1px solid red;
+padding:10px 0px;
+transition:all 0.3s linear 0s;
+}
+.col-md-4 a{
+  color:white;
+  font-size:18px;
+}
+.banner-text{
+  font:16px Poppins,sans-serif;
+  margin-right:10px;
+}
+    </style>
+    <body>
+      <!--Navbar-->
+      <div class = "navbar-fixed">
+      <nav>
+        <div class="nav-wrapper" style="height:75px;">
+          <a href="#" class="brand-logo"><img src = "images/sunshine.png"></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#"><i class=" material-icons">home</i></a></li>
+            <li><a href="#"><b>About Us</b></a></li>
+            <li><a href="#"><b>Products</b></a></li>
+            <li><a href="#"><b>About Solar</b></a></li>
+            <li><a href="#"><b>Contact Us</b></a></li>
+            <li><a href="#"><b>Reseller Zone</b></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+      <!--Carousel-->
+      <div id="slider">
+        
+        <figure style="position:absolute">
+          
+            <div class="slider1" style="position:relative">
+        <img src="images/background.jpg" alt>
+        <div class="content" style="position:absolute; margin-left:400px;margin-top:25px;">
+                <h5 style="color:white; font:15px Poppins,sans-serif;letter-spacing:1.5px; text-transform:uppercase;"><center>Welcome to Sunshine Energy</center></h5> 
+                <h1 style="color:white; font:30px Poppins,sans-serif"><center>One Time Investment.Life Time Savings</center></h1>
+                <h6 style="color:white; font:20px Poppins,sans-serif"><center>Efficient Solar Power Solutions</center></h6>
+        </div>
+        </div>
+        <div class="slider2">
+        <img src="images/contact2.jpg" alt>
+        </div>
+        <div class="slider3">
+        <img src="images/contact3.jpg" alt>
+        </div>
+        <div class="slider4">
+        <img src="images/carousel.jpg" alt>
+        </div>
+        <div class="slider5">
+        <img src="images/background.jpg" alt>
+        </div>    
+        </figure>
+        
+        </div>
+       
+                 <div class="row" style="position:relative; margin-top:367px;">
+                <div class="col">
+                  <div class="card">
+                    <div class="card-image">
+                      <img src="images/contact2.jpg">
+                      <span class="card-title">SOLAR PRODUCTS</span>
+                    </div>
+                    <div class="card-content">
+                      <p>Solar Power Solutions
+
+                      </p>
+                    </div>
+                    </div>
+                    </div>
+                    
+                    <div class="col">
+                            <div class="card">
+                              <div class="card-image">
+                                <img src="images/contact2.jpg">
+                                <span class="card-title">SOLAR PRODUCTS</span>
+                              </div>
+                              <div class="card-content">
+                                <p>Solar PV Module
+
+                                </p>
+                              </div>
+                              </div>
+                              </div>
+                              
+                    <div class="col">
+                            <div class="card">
+                              <div class="card-image">
+                                <img src="images/contact2.jpg">
+                                <span class="card-title">SOLAR PRODUCTS</span>
+                              </div>
+                              <div class="card-content">
+                                <p>
+                                    Solar & Net Meter
+                                </p>
+                              </div>
+                              </div>
+                              </div>
+                              <div class="col">
+                                <div class="card">
+                                  <div class="card-image">
+                                    <img src="images/contact2.jpg">
+                                    <span class="card-title">SOLAR PRODUCTS</span>
+                                  </div>
+                                  <div class="card-content">
+                                    <p>Solar PV Module
+    
+                                    </p>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  
+                                  <div class="col">
+                                    <div class="card">
+                                      <div class="card-image">
+                                        <img src="images/contact2.jpg">
+                                        <span class="card-title">SOLAR PRODUCTS</span>
+                                      </div>
+                                      <div class="card-content">
+                                        <p>Solar PV Module
+        
+                                        </p>
+                                      </div>
+                                      </div>
+                                      </div>
+                            
+                  </div>
+                  <BR><BR>
+                    <div class="aboutsun">
+                      <h1  style="color:red; font:40px Poppins,sans-serif; text-transform:uppercase;font-weight:300;"><center><b><u>ABOUT SUNSHINE ENERGY INC.</u></b></center></h1><br>
+                      <h6 style="color:black; font:27px Roboto Slab;"><b>Sunshine Energy Inc. Group is one of the leading energy and engineering solutions provider, offering a range of products and services that help customers effectively meet their energy needs in a safe and sustainable manner.</b></h6>
+                      <div class="homeRequestQuote">
+                          <div class="section-mid">
+                          <h6 style="font-size:27px;max-width:68%;float:left;margin-left:20px;">We are looking for a diverse & robust network of channel partners who will help us deliver our solar solutions and products</h6>
+                      <div class="requestQuoteRight">
+                          <a href="#">Become a Reseller</a>
+                      </div>
+                      </div>
+                      </div>  
+                    </div>
+                    <br><br>
+                    <div class="background" style="background:grey; height:870px;">
+                      <br>
+                    <div class="prouductIntro">
+                    <h1 style="color:red; font:40px Poppins,sans-serif;letter-spacing:1.5px; text-transform:uppercase;font-weight:300;"><center>OUR PRODUCTS AND SERVICES</center></h1><br>
+                    <h5><center>We are leading energy and engineering solutions provider, offering a range of products and services
+                        effectively meeting the customer's energy needs in a safe and sustainable manner.</center></h5>         
+                      </div>
+                        <div class="homeProductSection">
+                       <div class="section-mid">
+                            <div class="HomeProductTextBox" style="background:#F0F8FF">
+                                <h3 style="font:30px Poppins,sans-serif; color:red">PRODUCTS</h3>
+                                  <h6 style="color:black; font:20px Roboto Slab;">With our intensive product range from panels, inverter to BOS, we can provide solution which suits your need. Explore our product range to find the product that suits your needs.</h6>>
+                              <a href="#" title="" class="detail-btn">Learn More</a>
+                              </div>
+                              <div class="homeProductImgBox">
+                               
+                                <a href="#" title=""><img src="images/whysolar1.jpg" alt=""></a>
+                              </div>
+                              <div class="HomeProductTextBox HomeProductTextBoxRight" style="background:#F0F8FF" >
+                                <h3 style="font:30px Poppins,sans-serif; color:red;"> SERVICES</h3>
+                                  <h6 style="color:black; font:20px Roboto Slab;">We provide a wide range of services which include Designing, Engineering, Supply, Installation, Testing, Consultation Operation & Maintenance and Commissioning of PV system.</h6>>
+                                 <a href="#" title="" class="detail-btn">Learn More</a>
+                              </div>
+                              <div class="homeProductImgBox homeProductImgBoxLeft" >
+                                
+                                <a href="#" title=""><img src="images/whysolar2.jpg" alt=""></a>
+                              </div>
+                        </div>
+                       </div>
+                       </div>
+                        <br><br>
+                          <div class="whysolarIntro">
+                            <h1 style="color:red"><center>WHY SOLAR</center></h1>
+                            <h4 style="font:Poppins,sans-serif"><center><b>One-time investment. Lifetime savings.</b></center></h4>
+                            <h6 style="font:24px Poppins,sans-serif"><center>With reduced costs & improved technology, now is the time to go solar</center></h6>
+                            <div class="row">
+                              <div class="col">
+                                <img src="images/bulb.png" style="margin-left:30px">
+                                <div class="banner-text">REDUCED ENERGY BILLS</div>
+                              </div>
+                              <div class="col">
+                                  <img src="images/money.png" style="margin-left:30px">
+                                  <div class="banner-text">SAFE INVESTMENT,HIGH RETURNS</div>
+                                </div>
+                                <div class="col">
+                                    <img src="images/settings.png" style="margin-left:30px">
+                                    <div class="banner-text">NEGLIGIBLE MAINTAINENCE</div>
+                                  </div>
+                                  <div class="col">
+                                      <img src="images/environment.png" style="margin-left:30px">
+                                      <div class="banner-text">ENVIRONMENT FRIENDLY</div>
+                                    </div>
+                                    <div class="col">
+                                        <img src="images/people.png" style="margin-left:30px">
+                                        <div class="banner-text">EVERYONE CAN USE</div>
+                                      </div>
+                            </div>
+                          </div>
+                        <footer class="page-footer" style="background:black; height:300px;">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <h5 class="red-text">Company</h5>
+                                  <ul style="">
+                                    <li><a  href="#!">Home</a></li>
+                                    <li><a  href="#!">About Us</a></li>
+                                    <li><a  href="#!">About Solar</a></li>
+                                    <li><a  href="#!">Products</a></li>
+                                    <li><a  href="#!">Contact Us</a></li>
+                                    <li><a  href="#!">Become a Reseller</a></li>
+                                    <li><a  href="#!">Enquire Now</a></li>
+                                  </ul>
+                                </div>
+                                <div class="col-md-4">
+                                    <h5 class="red-text">SUNSHINE ENERGY INC.</h5>
+                                    <p>Registered Office: 6/383, Vidhyadhar Nagar, Jaipur-302023. </p>
+                                    <p>Corporate Office: A-238E, Road No. 9, Vishkarma Industrial Area, Jaipur-302013</p>
+                                    <p>Sales Office Contact: 0141-4024724</p>
+                                    <p>Contact: (+91) 997-111-9724, 992-808-2292</p>
+                                    <p>Email: mail.renewableenergy@gmail.com</p>
+                                  </div>
+                              <div class="col-md-4">
+                                  <h5 class="red-text"><center>FOLLOW US</center></h5>
+                               </div>
+                              </div>
+                              </div>
+                          </footer>                   
+     <!--JavaScript at end of body for optimized loading-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    </body>
+  </html>
