@@ -1,0 +1,216 @@
+<html>
+<head>
+    <title>Sunshine Energy</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    * {
+    box-sizing: border-box;
+}
+.drawers {
+  position: relative;
+    }
+  .drawer {
+    position: fixed;
+    display: none;
+    background:#ebebe0 ;
+    width:500px;
+    overflow:hidden;
+  }
+ 
+/* Style inputs */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+/* Style the container/contact section */
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+/* Create two columns that float next to eachother */
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+</style>
+<body>
+        <script>
+                (function($){var a={},c="doTimeout",d=Array.prototype.slice;$[c]=function(){return b.apply(window,[0].concat(d.call(arguments)))};$.fn[c]=function(){var f=d.call(arguments),e=b.apply(this,[c+f[0]].concat(f));return typeof f[0]==="number"||typeof f[1]==="number"?this:e};function b(l){var m=this,h,k={},g=l?$.fn:$,n=arguments,i=4,f=n[1],j=n[2],p=n[3];if(typeof f!=="string"){i--;f=l=0;j=n[1];p=n[2]}if(l){h=m.eq(0);h.data(l,k=h.data(l)||{})}else{if(f){k=a[f]||(a[f]={})}}k.id&&clearTimeout(k.id);delete k.id;function e(){if(l){h.removeData(l)}else{if(f){delete a[f]}}}function o(){k.id=setTimeout(function(){k.fn()},j)}if(p){k.fn=function(q){if(typeof p==="string"){p=g[p]}p.apply(m,d.call(n,i))===true&&!q?o():e()};o()}else{if(k.fn){j===undefined?e():k.fn(j===false);return true}else{e()}}}})(jQuery);
+                
+                
+                $(document).ready(function() {
+                  var $links = $('.menu a'),
+                      $drawers = $('.drawer');
+                
+                  $links.each(function (){
+                    var $link = $(this),
+                        $drawer = $drawers.filter('#' + $link.data('drawer')),
+                        $both = $(this).add($drawer);
+                
+                    $both.hover(function () {
+                      $both.doTimeout( 'hover', 200, function() {
+                        $drawer.fadeIn(100);
+                      });
+                    
+                    }, function () {
+                      $both.doTimeout( 'hover', 200, function() {
+                        $drawer.fadeOut(100);
+                      });
+                    });
+                  });
+                });
+                   </script>    
+        <div class="container-fluid" style="position:relative; background-color:white; height:90px;"  >
+                <img src="images/sun.png" style="float:left; margin-top:10px; margin-left:5px; position:absolute;">
+                <nav class="navbar-toggle-always collapsed" style="float:right; position:relative; margin-top:20px;">
+    
+                        <ul class="nav justify-content-end, menu">
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.html" data-drawer = "drawer1" style="color:black; font:18px Poppins,sans-serif; font-weight:bold" >Home</a>
+                                <div class="drawers">
+                                        <div class="drawer" id="drawer1">
+                                          <p>
+                                                Sunshine Energy Inc. Group is one of the leading energy and engineering solutions provider, offering a range of products and services that help customers effectively meet their energy needs in a safe and sustainable manner. Our highly qualified Business executive work closely with our Investors to help them secure maximum returns out of their investments. Our strategic plan of action and infrastructure enables fast growth and secured returns we work closely with our clients to ensure our customers receive full value.......<a href="#" style="text-decoration: none" >[Learn More.]</a>
+                                          </p>
+                                        </div> 
+                                        </div>
+                        
+                    </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:black;font:18px Poppins,sans-serif; font-weight:bold">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:black; font:18px Poppins,sans-serif; font-weight:bold">Products</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:black;font:18px Poppins,sans-serif; font-weight:bold">Projects</a>
+                      </li>
+                      <li class="nav-item">
+                            <a class="nav-link" href="contact.html" style="color:black;font:18px Poppins,sans-serif;font-weight:bold ">Contact Us</a>
+                          </li>
+                          <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:black;font:18px Poppins,sans-serif;font-weight:bold">Become a Reseller</a>
+                              </li>
+                    </ul>
+                    </nav>
+                    </div>
+    <div class="container">
+        <div style="text-align:center">
+          <h2 style="font-size:40px">Contact Us</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div id="map" style="width:100%;height:500px">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3555.416738459661!2d75.77621571522339!3d26.985363983096324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db241f0610ce1%3A0x555a66ad3b162e72!2sSunshine+Energy+Inc.!5e0!3m2!1sen!2sin!4v1525896909824" width="500" height="500" frameborder="0"  allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="column"  >
+           <h4 style="color:blue; font:30px Poppins,sans-serif;letter-spacing:1.5px; text-transform:uppercase;font-weight:300;">Sunshine Energy Inc</h4>
+           <h6 style="color:black; font:20px Roboto Slab;">
+                A-238E, Ground Floor, Rd Number 9 <Br> Vishwakarma Industrial Area<br> Jaipur, Rajasthan 302013<br>
+                    Contact:Mr. Anubhav Aggarwal<br>
+                    <i class="fa fa-phone" aria-hidden="true"></i> +91-997-111-9724<br>
+                    <i class="fa fa-envelope" aria-hidden="true"></i> mail.renewableenergy@gmail.com<br>
+                
+           </h6>
+          </div>
+        </div>
+      </div>
+      <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-up"></i></a>
+<script>
+    // ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+</script>
+    </body>
+    </html>
